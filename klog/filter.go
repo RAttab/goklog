@@ -3,7 +3,7 @@
 package klog
 
 import (
-	"github.com/datacratic/goset"
+	"github.com/RAttab/goset"
 
 	"log"
 	"strings"

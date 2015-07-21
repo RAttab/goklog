@@ -3,7 +3,7 @@
 package klog_test
 
 import (
-	"github.com/datacratic/goklog/klog"
+	"github.com/RAttab/goklog/klog"
 
 	"fmt"
 	"log"

@@ -3,7 +3,7 @@
 package klog
 
 import (
-	"github.com/datacratic/gorest/rest"
+	"github.com/RAttab/gorest/rest"
 )
 
 // RingREST provides the REST interface for the Ring printer.

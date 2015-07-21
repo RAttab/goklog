@@ -3,7 +3,7 @@
 package klog_test
 
 import (
-	"github.com/datacratic/goklog/klog"
+	"github.com/RAttab/goklog/klog"
 )
 
 // The klogr package provides wrapppers for printer stages which makes them
