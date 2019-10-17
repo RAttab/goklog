@@ -2,8 +2,6 @@
 
 package klog
 
-import ()
-
 // Chainer represents a printer which forwards its output to another
 // printer. Generally used to define a processing stage in a printer pipeline.
 type Chainer interface {

@@ -11,8 +11,7 @@ import (
 )
 
 // Barebone basic usage example of klog.
-func Example_Simple() {
-
+func Example() {
 	// Default klog printer is a light wrapper around the standard log package
 	// so we need to modify it a bit to make it work for our example.
 	log.SetFlags(0)
@@ -33,8 +32,7 @@ func Example_Simple() {
 
 // Here we'll setup a klog pipeline which will be used to cleanup our output
 // stream.
-func Example_Pipeline() {
-
+func ExampleChain() {
 	// It's pretty easy to create a printer so, because this is go, let's log to
 	// a channel.
 	linesC := make(chan string, 100)
@@ -49,7 +47,7 @@ func Example_Pipeline() {
 	filter.AddSuffix("debug")
 
 	// Dedup is another useful stage that can be used to avoid spamming the logs
-	// with duplicated messages. Deduping is done seperately for each key-stream
+	// with duplicated messages. Deduping is done separately for each key-stream
 	// and is periodically flushed every second by default.
 	dedup := klog.NewDedup()
 

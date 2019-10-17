@@ -66,6 +66,7 @@ func (logger *Logger) KPanicf(key, format string, v ...interface{}) {
 }
 
 // logger is the default printer used by the global klog print functions.
+// nolint `logger` is a global variable (gochecknoglobals)
 var logger = New(DefaultPrinter, DefaultPrinter)
 
 // KPrint is similar to fmt.Print but accepts a key as it's first parameter.

@@ -97,9 +97,7 @@ func (ring *Ring) get(filter func(*Line) bool) (result []*Line) {
 
 	sort.Sort(lineArray(lines))
 
-	for _, line := range lines {
-		result = append(result, line)
-	}
+	result = append(result, lines...)
 
 	return
 }
