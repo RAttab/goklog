@@ -3,7 +3,7 @@
 package klog
 
 import (
-	"github.com/RAttab/goset"
+	set "github.com/RAttab/goset"
 
 	"log"
 	"strings"
@@ -198,7 +198,6 @@ func (filter *Filter) print(line *Line) {
 
 func (filter *Filter) op(op int, value string) {
 	switch op {
-
 	case filterAdd:
 		filter.keys.Put(value)
 	case filterRemove:

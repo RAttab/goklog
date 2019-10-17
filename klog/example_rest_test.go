@@ -8,8 +8,7 @@ import (
 
 // The klogr package provides wrapppers for printer stages which makes them
 // accessible from a rest interface using the gorest package.
-func Example_REST() {
-
+func ExampleNewFilterREST() {
 	// Here we create a REST enabled filter which allows us to modify the
 	// filtering rules of the stage while the program is running.
 	filter := klog.NewFilterREST("/path/to/filter", klog.FilterIn)

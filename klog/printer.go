@@ -19,13 +19,16 @@ type PrinterFunc func(*Line)
 func (fn PrinterFunc) Print(line *Line) { fn(line) }
 
 // NilPrinter is a noop printer.
+// nolint `NilPrinter` is a global variable (gochecknoglobals)
 var NilPrinter = PrinterFunc(func(line *Line) {})
 
 // DefaultPrinter is the default printer used by the kprint functions in klog.
+// nolint `DefaultPrinter` is a global variable (gochecknoglobals)
 var DefaultPrinter = PrinterFunc(LogPrinter)
 
-// DefaultPrinter is the default printer used by the kfatal and kpanic functions
+// DefaultFatalPrinter is the default printer used by the kfatal and kpanic functions
 // in klog.
+// nolint `DefaultFatalPrinter` is a global variable (gochecknoglobals)
 var DefaultFatalPrinter = PrinterFunc(LogPrinter)
 
 // LogPrinter is forwards all lines to the golang standard log library.

@@ -74,7 +74,6 @@ func (dedup *Dedup) print(line *Line) {
 		dedup.PrintNext(line)
 		counter.Count = 0
 		counter.Value = line.Value
-
 	} else {
 		counter.Count++
 	}
